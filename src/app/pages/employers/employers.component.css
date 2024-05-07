@@ -1,0 +1,70 @@
+.services-bg{
+    background-image: url('../../../assets/images/services-banner.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 180px;
+    padding-bottom: 20px;
+}
+.services-section .banner-content{
+    max-width: 500px;
+    margin: 0px auto;
+    text-align: center;
+}
+.services-section .banner-content h1{
+    color: #fff;
+}
+.banner-content p{
+    color: #fff;
+}
+.banner-content h1{
+    font-size: 75px;
+}
+.services-card{
+    background-color: #ebf6fe;
+    border-radius: 30px 30px 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+.number-service-wrap {
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.number-service {
+    background-color: #672666 !important;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1em;
+}
+.h4-link {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.3em;
+    transition-property: color;
+    transition-duration: .3s;
+    display: inline-block;
+}
+.button-service {
+    z-index: 10;
+    margin-top: 20px;
+    position: relative;
+}
+.services-title-section{
+    padding: 40px 0px;
+}
+.service-exp-img{
+    width: 400px;
+    margin: auto;
+}

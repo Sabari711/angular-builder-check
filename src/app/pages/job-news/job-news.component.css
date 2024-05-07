@@ -1,0 +1,48 @@
+.job-news-section .job-img{
+    width: 575px;
+    display: inline-block;
+}
+.job-news-section .job-img img {
+    object-fit: cover;
+    height: 320px;
+    border-radius: 50px 50px 50px 10px;
+    transition: 0.3s;
+}
+.job-news-section .job-content{
+    display: block;
+}
+.recent-img{
+    width: 150px;
+    display: inline-block;
+}
+.recent-img img{
+    object-fit: cover;
+    height: 170px; 
+    border-radius: 50px 50px 50px 10px;
+    transition: 0.3s;
+}
+.recent-news-heading{
+    font-size: 20px;
+}
+.job-news-section .created-date{
+    font-size: 16px;
+    color: #5d6d82;
+}
+.latest-job-news h2:hover{
+    transition: 0.3s;
+    color: #f4a02e;
+}
+.recent-job-news h3:hover{
+    transition: 0.3s;
+    color: #f4a02e;
+}
+.latest-job-news .job-img img:hover{
+    transition: 0.3s;
+    cursor: pointer;
+    opacity: .8;
+}
+.recent-img img:hover{
+    transition: 0.3s;
+    cursor: pointer;
+    opacity: .8;
+}

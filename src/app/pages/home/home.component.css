@@ -1,0 +1,73 @@
+.banner-img{
+    width: 500px;
+    margin: 0px auto;
+}
+.banner-section h1{
+    font-size: 60px;
+}
+.banner-circle{
+    position: relative;
+    width: 400px;
+    z-index: -1;
+}
+.banner-circle img{
+    position: absolute;
+    right: 59px;
+    top: 30px;
+}
+.initial-font{
+    font-size: 40px;
+    color: #f4a02e;
+}
+.job-img{
+    width: 300px;
+}
+.for-employers-section h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+.reqruitment ul{
+    float: inline-end;
+}
+.reqruitment ul li{
+    text-align: end;
+}
+.for-employers-section ul li{
+    line-height: 25px;
+}
+.client-img {
+    width: 350px;
+}
+
+.for-employers-section mat-icon{
+    font-size: 15px;
+    margin-top: 5px;
+}
+.map-section iframe{
+    width: 100%;
+}
+.our-vision{
+    width: 200px;
+    margin: auto;
+    border-radius: 10px;
+}
+swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

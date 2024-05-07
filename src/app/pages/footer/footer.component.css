@@ -1,0 +1,25 @@
+.footer-section{
+    padding: 35px 10px 5px;
+}
+.footer-section mat-icon{
+    font-size: 16px;
+    color: #f4a02e;
+}
+.footer-section .cs-border{
+    border-bottom: 1px solid #f4a02e;
+}
+.footer-section h3{
+    font-size: 19px;
+    color: rgb(7, 27, 78);
+}
+.social-icons i{
+    font-size: 50px;
+}
+.social-icons .ics{
+    padding: 11px 5px 5px 10px;
+    width: 70px;
+    border-radius: 50%;
+    height: 70px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    color: #f4a02e;
+}

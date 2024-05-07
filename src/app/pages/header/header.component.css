@@ -1,0 +1,11 @@
+.logo-img{
+    max-width: 200px;
+    padding: 5px;
+}
+.navbar.fixed-top.navbar-expand-lg.bg-light{
+    z-index: 100 !important;
+}
+.navbar a{
+    font-size: 20px;
+    padding: 10px 20px;
+}

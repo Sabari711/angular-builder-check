@@ -1,0 +1,51 @@
+
+<nav class="navbar fixed-top navbar-expand-lg bg-light">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/" [class.active]="isLinkActive('/')">
+        <div class="logo-img">
+          <img [src]="baseUrl+'assets/images/grovemanglobal.png'" alt="Logo">
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav nav-routes align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/" [class.active]="isLinkActive('/')">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/job-seekers" routerLinkActive="active">Apply Job</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/job-news" routerLinkActive="active">Job News</a>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link" routerLink="/contact-us" routerLinkActive="active">
+
+            </a> -->
+            <a class="nav-link" href="#contact-us-section"><button mat-raised-button class="pr-btn" >Get In Touch</button></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+<!-- <div class="noob fixed-top ">
+  <ul class="d-flex flex-wrap justify-content-end align-items-center mb-0 list-group-numbered gap-2 pe-4" >
+      <li>+91 80986 77864</li>
+      <li style="padding: 1px 0px 3px 0px;">
+          <span style="border-right: 2px solid #000;"></span>
+      </li>
+      <li>+91 73054 78864</li>
+      <li style="padding: 1px 0px 3px 0px;">
+          <span style="border-right: 2px solid #000;"></span>
+      </li>
+      <li>grovemanglobalpl&#64;gmail.com</li>
+  </ul>
+</div> -->
+
+  
