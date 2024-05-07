@@ -1,0 +1,9 @@
+{
+  "routes": [
+    "/",
+    "/contact-us",
+    "/job-news",
+    "/job-seekers",
+    "/services"
+  ]
+}
