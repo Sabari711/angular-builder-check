@@ -2,7 +2,6 @@
     <div class="services-bg">
         <div class="container">
             <div class="banner-content">
-
                 <h1 class="mb-3">Services</h1>
                 <p class="mb-3">Recruitment services, often provided by specialized agencies or firms, offer
                     organizations assistance in identifying, attracting.</p>
@@ -20,7 +19,7 @@
                             <div class="number-service">01</div>
                         </div>
                         <a (click)="scrollToElement(hr_consutancy)" class="h4-link">Human Resource Consutancy</a>
-                        <p class="paragraph">The agency works with the organization to understand the job requirements.</p>
+                        <p class="paragraph">Groveman can be the backbone of any company that wants to succeed and reach their goals.</p>
                         <div class="button-service">
                             <button mat-raised-button (click)="scrollToElement(hr_consutancy)" class="pr-btn">Read more...</button>
                         </div>
@@ -34,7 +33,7 @@
                             <div class="number-service">02</div>
                         </div>
                         <a (click)="scrollToElement(contract_staffing)" class="h4-link">Contract Staffing</a>
-                        <p class="paragraph">The agency works with the organization to understand the job requirements.</p>
+                        <p class="paragraph">All industries that need immediate hiring for short term or work on contract can count on us for the right talent.</p>
                         <div class="button-service">
                             <button mat-raised-button (click)="scrollToElement(contract_staffing)" class="pr-btn">Read more...</button>
                         </div>
@@ -47,10 +46,10 @@
                         <div class="number-service-wrap">
                             <div class="number-service">03</div>
                         </div>
-                        <a href="" class="h4-link">Talent Acquisition</a>
-                        <p class="paragraph">The agency works with the organization to understand the job requirements.</p>
+                        <a (click)="scrollToElement(talent_aq)" class="h4-link" >Talent Acquisition</a>
+                        <p class="paragraph">We can take the burden of recruiting and staffing off your shoulders, giving you more time to focus on your business.</p>
                         <div class="button-service">
-                            <button mat-raised-button class="pr-btn">Read more...</button>
+                            <button mat-raised-button (click)="scrollToElement(talent_aq)" class="pr-btn">Read more...</button>
                         </div>
                     </div>
                 </div>
@@ -61,10 +60,10 @@
                         <div class="number-service-wrap">
                             <div class="number-service">04</div>
                         </div>
-                        <a href="" class="h4-link">Payroll Management</a>
-                        <p class="paragraph">The agency works with the organization to understand the job requirements.</p>
+                        <a (click)="scrollToElement(payroll)" class="h4-link">Payroll Management</a>
+                        <p class="paragraph">At Groveman Global Pvt. Ltd., we take care of your payroll needs with competency. Our experienced payroll team has at least 5 years' experience in the field.</p>
                         <div class="button-service">
-                            <button mat-raised-button class="pr-btn">Read more...</button>
+                            <button mat-raised-button (click)="scrollToElement(payroll)" class="pr-btn">Read more...</button>
                         </div>
                     </div>
                 </div>
@@ -75,10 +74,10 @@
                         <div class="number-service-wrap">
                             <div class="number-service">05</div>
                         </div>
-                        <a href="" class="h4-link">Reference Checks</a>
-                        <p class="paragraph">The agency works with the organization to understand the job requirements.</p>
+                        <a (click)="scrollToElement(resume_writing)" class="h4-link">Resume Writing & Optimisation </a>
+                        <p class="paragraph">We understand how difficult it can be to create a captivating resume. That's why our team provides professional writing and optimization services to give our customers an edge. </p>
                         <div class="button-service">
-                            <button mat-raised-button class="pr-btn">Read more...</button>
+                            <button mat-raised-button (click)="scrollToElement(resume_writing)" class="pr-btn">Read more...</button>
                         </div>
                     </div>
                 </div>
@@ -89,10 +88,10 @@
                         <div class="number-service-wrap">
                             <div class="number-service">06</div>
                         </div>
-                        <a href="" class="h4-link">Onboarding Assistance</a>
-                        <p class="paragraph">The agency works with the organization to understand the job requirements.</p>
+                        <a (click)="scrollToElement(campus)" class="h4-link">Campus Drivers</a>
+                        <p class="paragraph">We boast a comprehensive network with educational institutions in the state; organizing campus interviews commencing in February annually. </p>
                         <div class="button-service">
-                            <button mat-raised-button class="pr-btn">Read more...</button>
+                            <button mat-raised-button (click)="scrollToElement(campus)" class="pr-btn">Read more...</button>
                         </div>
                     </div>
                 </div>
@@ -102,36 +101,95 @@
 </section>
 <section class="services-explain-section wt-section" >
     <div class="container">
-        <h2 class="text-center">About Our <span class="pr-cl">Services</span></h2>
-        <div class="row align-items-center" #hr_consutancy>
+        <h2 class="text-center mb-3">About Our <span class="pr-cl">Services</span></h2>
+        <div class="row align-items-center mb-3" #hr_consutancy>
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" >
-                <div class="service-exp-img mb-3" >
-                    <img [src]="baseUrl+'assets/images/accountant.png'" alt="">
+                <div class="service-exp-img mb-3">
+                    <img [src]="baseUrl+'assets/images/human-consultancy.png'" alt="human-consultancy">
                 </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="service-exp-content">
                     <p class="mb-3">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        Groveman can be the backbone of any company that wants to succeed and reach their goals. Our experienced HR and procurement team are equipped to provide your organisation with any type of resource necessary to attain your production needs and profitability. We specialise in Contract Staffing, Talent Acquisition, Executive Hiring, Payroll Management, Statutory Compliances, Skill Development and Sales/Marketing Training.
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="row align-items-center" #contract_staffing>
+        <div class="row align-items-center mb-3" #contract_staffing>
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="service-exp-content">
                     <p class="mb-3">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        All industries that need immediate hiring for short term or work on contract can count on us for the right talent or labour that is pre-verified and has gone through a full background screening revealing their identity and ID proof to ensure actual residency and prevent fraudulent activity.
                     </p>
                 </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" >
                 <div class="service-exp-img mb-3" >
-                    <img [src]="baseUrl+'assets/images/accountant.png'" alt="">
+                    <img [src]="baseUrl+'assets/images/contract-staffing.png'" alt="contract-staffing">
                 </div>
             </div>
-           
+        </div>
+
+        <div class="row align-items-center mb-3" #talent_aq>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" >
+                <div class="service-exp-img mb-3">
+                    <img [src]="baseUrl+'assets/images/talent-acquisition.png'" alt="talent-acquisition">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="service-exp-content">
+                    <p class="mb-3">
+                        We can take the burden of recruiting and staffing off your shoulders, giving you more time to focus on your business. We have an excellent offer and are equipped to provide a personalised solution quickly. Our network enables us to select candidates that meet your specifications with up to 90% accuracy. Additionally, it helps us keep our overhead costs low.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-3" #payroll>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="service-exp-content">
+                    <p class="mb-3">
+                        At Groveman Global Pvt. Ltd., we take care of your payroll needs with competency. Our experienced payroll team has at least 5 years' experience in the field, and ensures the timely delivery of payments to workers, as well as submission and processing of legally required documents. Additionally, staff will be privy to our clear escalation matrix for any queries and our exclusive customer support team is always on-hand to provide individualised attention.
+                    </p>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" >
+                <div class="service-exp-img mb-3" >
+                    <img [src]="baseUrl+'assets/images/payroll.png'" alt="payroll">
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-3" #resume_writing>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" >
+                <div class="service-exp-img mb-3">
+                    <img [src]="baseUrl+'assets/images/resume-writing.png'" alt="resume-writing">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="service-exp-content">
+                    <p class="mb-3">
+                        We understand how difficult it can be to create a captivating resume. That's why our team provides professional writing and optimization services to give our customers an edge. Experienced writers collaborate with each client to craft an individualized resume that showcases their talents, successes, and background. Additionally, we make sure resumes pass through applicant tracking systems (ATS) by optimizing them for the initial screening process so that hiring decision-makers can see them. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-3" #campus>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="service-exp-content">
+                    <p class="mb-3">
+                        We boast a comprehensive network with educational institutions in the state; organizing campus interviews commencing in February annually. Our committed team is responsible for maintaining relations with nearly 450 colleges, including 120 women-only institutes. Furthermore, we actively engage in numerous job fairs hosted by district heads, employment exchanges, National Skill Development Centres, Indian Youth employment schemes and NGO programs.
+                    </p>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" >
+                <div class="service-exp-img mb-3" >
+                    <img [src]="baseUrl+'assets/images/campus.png'" alt="campus">
+                </div>
+            </div>
         </div>
     </div>
 </section>

@@ -23,6 +23,7 @@ import { PopUpComponent } from '../pop-up/pop-up.component';
 import { environment } from '../../../environments/environment';
 import AOS from 'aos';
 import { isPlatformBrowser, DOCUMENT } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
 
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
@@ -49,7 +50,8 @@ export class HomeComponent implements OnInit {
     public apiServices: ApiServiceService,
     public dialog: MatDialog,
     @Inject(PLATFORM_ID) private platformId: Object,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
+    private toastr : ToastrService
   ) {}
 
   baseUrl: string = environment.frontEndUrl;
@@ -96,11 +98,13 @@ export class HomeComponent implements OnInit {
               dialogRef.afterClosed().subscribe((result) => {
                 location.reload();
               });
-            }
-          });
-      } else {
-        // return false;
-      }
+          } else {
+            this.toastr.error(data.message);
+          }
+        });
+    } else {
+      this.toastr.error('Please fill all the require fields');
+    }
     }
 
   }
