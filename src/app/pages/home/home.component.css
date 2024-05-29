@@ -71,3 +71,6 @@ swiper-container {
     height: 100%;
     object-fit: cover;
   }
+  .mat-mdc-radio-button ~ .mat-mdc-radio-button {
+    margin-left: 16px;
+  }

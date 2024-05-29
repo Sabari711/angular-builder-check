@@ -1,35 +1,29 @@
-<section class="apply-section banner-section">
-    <div class="job-form-layer">
-        <div class="box" data-aos="fade-up">
-            <div class="banner-img mt-5">
-                <img [src]="baseUrl+'assets/images/apply-now-banner.png'" alt="apply-now-banner">
-            </div>
-        </div>
-
+<section class="apply-section employers-section banner-section">
+    <div class="job-form-layer mt-3">        
         <div class="job-form p-lg-5 p-md-3 p-sm-1 p-1 mb-5">
             <div class="box" data-aos="fade-down">
-                <h2 class="text-center mb-3 ">APPLY <span class="pr-cl">HERE!</span></h2>
+                <h2 class="text-center mb-3 ">FOR <span class="pr-cl">EMPLOYERS</span></h2>
             </div>
             <div class="apply-form">
-                <form [formGroup]="jobApplyForm" (ngSubmit)="submit()" #LocalForm="ngForm">
+                <form [formGroup]="employersForm" (ngSubmit)="submit()" #LocalForm="ngForm">
                     <div class="row g-3">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="px-3">
                                 <div class="box" data-aos="fade-right">
-                                    <p>Name</p>
+                                    <p>Employer Name</p>
                                     <mat-form-field appearance="outline" hintLabel="Max 15 characters">
-                                        <mat-label> Name</mat-label>
-                                        <input #name matInput placeholder="Ex : John" formControlName="name">
-                                        <mat-hint align="end">{{name.value.length}} /15</mat-hint>
-                                        @if (jobApplyForm.controls['name'].errors?.['minlength'] ){
+                                        <mat-label>Employer Name</mat-label>
+                                        <input #empName matInput placeholder="Ex : John" formControlName="empName">
+                                        <mat-hint align="end">{{empName.value.length}} /15</mat-hint>
+                                        @if (employersForm.controls['empName'].errors?.['minlength'] ){
                                         <mat-error>This field must be min 3 characters</mat-error>
                                         }
-                                        @if (jobApplyForm.controls['name'].errors?.['maxlength']) {
+                                        @if (employersForm.controls['empName'].errors?.['maxlength']) {
                                         <mat-error>This field should be max 15 characters</mat-error>
                                         }
 
-                                        @if (jobApplyForm.controls['name'].errors?.['required']) {
-                                        <mat-error>First Name is <strong>required</strong></mat-error>
+                                        @if (employersForm.controls['empName'].errors?.['required']) {
+                                        <mat-error>Employer name is <strong>required</strong></mat-error>
                                         }
                                     </mat-form-field>
                                 </div>
@@ -39,10 +33,43 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="px-3">
                                 <div class="box" data-aos="fade-left">
-                                    <p>LinkedIn</p>
-                                    <mat-form-field appearance="outline" hintLabel="Enter LinkedIn URL">
-                                        <mat-label>LinkedIn</mat-label>
-                                        <input matInput formControlName="linkedInLink">
+                                    <p>Role or Category</p>
+                                    <mat-form-field appearance="outline" hintLabel="Enter Role or Category">
+                                        <mat-label>Role or Category</mat-label>
+                                        <input matInput formControlName="roleCate">
+                                        @if (employersForm.controls['roleCate'].errors?.['required']) {
+                                            <mat-error>Role or Category is <strong>required</strong></mat-error>
+                                            }
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="px-3">
+                                <div class="box" data-aos="fade-left">
+                                    <p>Company Website URL</p>
+                                    <mat-form-field appearance="outline" hintLabel="Enter Company Website">
+                                        <mat-label>Company Website URL</mat-label>
+                                        <input matInput formControlName="compWebsite">
+                                        @if (employersForm.controls['compWebsite'].errors?.['required']) {
+                                            <mat-error>Company Website URL is <strong>required</strong></mat-error>
+                                            }
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="px-3">
+                                <div class="box" data-aos="fade-left">
+                                    <p>No Of Employees</p>
+                                    <mat-form-field appearance="outline" hintLabel="Enter No Of Employees">
+                                        <mat-label>No Of Employees</mat-label>
+                                        <input matInput formControlName="noOfEmp">
+                                        @if (employersForm.controls['noOfEmp'].errors?.['required']) {
+                                            <mat-error>No Of Employees is <strong>required</strong></mat-error>
+                                            }
                                     </mat-form-field>
                                 </div>
                             </div>
@@ -57,11 +84,11 @@
                                         <mat-label> Email Address</mat-label>
                                         <input matInput placeholder="Ex : jhon&#64;gmail.com" formControlName="email">
                                         <mat-hint align="end">Ex : jhon&#64;gmail.com</mat-hint>
-                                        @if (jobApplyForm.controls['email'].errors?.['email'] &&
-                                        jobApplyForm.controls['email'].touched) {
+                                        @if (employersForm.controls['email'].errors?.['email'] &&
+                                        employersForm.controls['email'].touched) {
                                         <mat-error>Please enter a valid email address</mat-error>
                                         }
-                                        @if (jobApplyForm.controls['email'].errors?.['required']) {
+                                        @if (employersForm.controls['email'].errors?.['required']) {
                                         <mat-error>Email is <strong>required</strong></mat-error>
                                         }
                                     </mat-form-field>
@@ -73,19 +100,19 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="px-3">
                                 <div class="box" data-aos="fade-left">
-                                    <p>Whatsapp</p>
-                                    <mat-form-field appearance="outline" hintLabel="Enter the valid Whatsapp">
-                                        <mat-label> Whatsapp</mat-label>
-                                        <input #phoneNo matInput placeholder="Ex : 9876543210"
-                                            formControlName="phoneNo">
-                                        <mat-hint align="end">{{phoneNo.value.length}} /10</mat-hint>
-                                        @if (jobApplyForm.controls['phoneNo'].errors?.['pattern']) {
+                                    <p>Contact Number</p>
+                                    <mat-form-field appearance="outline" hintLabel="Enter the valid Contact Number">
+                                        <mat-label> Contact Number</mat-label>
+                                        <input #contactNo matInput placeholder="Ex : 9876543210"
+                                            formControlName="contactNo">
+                                        <mat-hint align="end">{{contactNo.value.length}} /10</mat-hint>
+                                        @if (employersForm.controls['contactNo'].errors?.['pattern']) {
                                         <mat-error>This field contain only <strong>numbers</strong></mat-error>
                                         }
-                                        @if (jobApplyForm.controls['phoneNo'].errors?.['minlength'] ){
+                                        @if (employersForm.controls['contactNo'].errors?.['minlength'] ){
                                         <mat-error>This field must be min 10 characters</mat-error>
                                         }
-                                        @if (jobApplyForm.controls['phoneNo'].errors?.['required'] ) {
+                                        @if (employersForm.controls['contactNo'].errors?.['required'] ) {
                                         <mat-error>Whatsapp is <strong>required</strong></mat-error>
                                         }
                                     </mat-form-field>
@@ -94,7 +121,7 @@
                         </div>
 
                         <!-- Upload Document -->
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                        <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="px-3">
                                 <div class="box" data-aos="fade-right">
                                     <p>
@@ -103,14 +130,14 @@
                                     <div>
                                         <input class="form-control form-control-lg" (change)="selectFile($event)"
                                             name="resume_img" id="formFileLg" type="file"
-                                            [class.is-invalid]="LocalForm.submitted && jobApplyForm.get('resume_img')?.invalid">
+                                            [class.is-invalid]="LocalForm.submitted && employersForm.get('resume_img')?.invalid">
                                     </div>
                                     <div class="invalid-feedback">
                                         This Field Is Required
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Location -->
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
@@ -121,13 +148,13 @@
                                         <mat-label> Location</mat-label>
                                         <textarea #location matInput formControlName="location" rows="4"></textarea>
                                         <mat-hint align="end">{{location.value.length}} /200</mat-hint>
-                                        @if (jobApplyForm.controls['location'].errors?.['maxlength']) {
+                                        @if (employersForm.controls['location'].errors?.['maxlength']) {
                                         <mat-error>This field should be max 200 characters</mat-error>
                                         }
-                                        @if (jobApplyForm.controls['location'].errors?.['minlength'] ){
+                                        @if (employersForm.controls['location'].errors?.['minlength'] ){
                                         <mat-error>This field must be min 3 characters</mat-error>
                                         }
-                                        @if (jobApplyForm.controls['location'].errors?.['required']) {
+                                        @if (employersForm.controls['location'].errors?.['required']) {
                                         <mat-error>Location is <strong>required</strong></mat-error>
                                         }
                                     </mat-form-field>
@@ -140,19 +167,19 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="px-3">
                                 <div class="box" data-aos="fade-right">
-                                    <p>Short Introduction</p>
+                                    <p>Job description</p>
                                     <mat-form-field appearance="outline">
-                                        <mat-label> Short Introduction</mat-label>
-                                        <textarea #shortIntro matInput placeholder="Ex : Like to contact" rows="4"
-                                            formControlName="shortIntro"></textarea>
+                                        <mat-label> Job description</mat-label>
+                                        <textarea #jobDesc matInput placeholder="Ex : Like to contact" rows="9"
+                                            formControlName="jobDesc"></textarea>
                                         <mat-hint align="start"><strong>Don't disclose personal info</strong>
                                         </mat-hint>
-                                        <mat-hint align="end">{{shortIntro.value.length}} / 256</mat-hint>
-                                        @if (jobApplyForm.controls['shortIntro'].errors?.['maxlength']) {
+                                        <mat-hint align="end">{{jobDesc.value.length}} / 500</mat-hint>
+                                        @if (employersForm.controls['jobDesc'].errors?.['maxlength']) {
                                         <mat-error>This field should be max 256 characters</mat-error>
                                         }
-                                        @if (jobApplyForm.controls['shortIntro'].errors?.['required']) {
-                                        <mat-error>Short Introduction is <strong>required</strong></mat-error>
+                                        @if (employersForm.controls['jobDesc'].errors?.['required']) {
+                                        <mat-error>Job description is <strong>required</strong></mat-error>
                                         }
                                     </mat-form-field>
                                 </div>

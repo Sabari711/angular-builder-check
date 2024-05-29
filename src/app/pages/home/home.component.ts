@@ -24,6 +24,7 @@ import { environment } from '../../../environments/environment';
 import AOS from 'aos';
 import { isPlatformBrowser, DOCUMENT } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
+import {MatRadioModule} from '@angular/material/radio';
 
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
@@ -39,6 +40,7 @@ import { ToastrService } from 'ngx-toastr';
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
+    MatRadioModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
@@ -46,6 +48,7 @@ import { ToastrService } from 'ngx-toastr';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeComponent implements OnInit {
+  swiperParams:any;
   constructor(
     public apiServices: ApiServiceService,
     public dialog: MatDialog,
@@ -77,14 +80,18 @@ export class HomeComponent implements OnInit {
       Validators.required,
       Validators.maxLength(256),
     ]),
+    category : new FormControl('candidate')
   });
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       AOS.init();
     }
+    
     // AOS.init();
   }
   submit(): any {
+    // console.log(this.contactUsForm.value);
+    
     if (isPlatformBrowser(this.platformId)) {
       if (this.contactUsForm.valid) {
         console.log(this.contactUsForm.value);
@@ -107,5 +114,24 @@ export class HomeComponent implements OnInit {
     }
     }
 
+  }
+
+  ngAfterViewInit() {
+    this.swiperParams = {
+      breakpoints: {
+        100: {
+          slidesPerView: 3,
+        },
+        640: {
+          slidesPerView: 5,
+        },
+        1024: {
+          slidesPerView: 6,
+        },
+      },
+    };
+
+    // now we need to assign all parameters to Swiper element
+    Object.assign(this.swiperParams);
   }
 }

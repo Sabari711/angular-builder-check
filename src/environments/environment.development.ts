@@ -1,5 +1,8 @@
 export const environment = {
     production: false,
-    apiUrl: 'http://my-api-url/',
-    frontEndUrl:"https://angular-builder-check.vercel.app/"
+    apiUrl: 'http://localhost:5000/',
+    frontEndUrl:"https://angular-builder-check.vercel.app/",
+    // frontEndUrl:"https://grovemanglobal.com/"
+    // frontEndUrl:"http://localhost:4200/"
+
 };

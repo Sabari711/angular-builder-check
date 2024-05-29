@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ContactUser } from '../interFaces/contact-user';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiServiceService {
-  private apiUrl = 'http://localhost:5000/';
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
@@ -26,6 +27,9 @@ export class ApiServiceService {
 
     return this.http.post(`${this.apiUrl}job-user`,formData)
 
+  }
+  EmployerFormSubmit(data:any){
+    return this.http.post(`${this.apiUrl}employers-submit`,data)
   }
   getBlogs(){
     return this.http.get(`${this.apiUrl}get-recent-blogs`)

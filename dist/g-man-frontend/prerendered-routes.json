@@ -2,8 +2,12 @@
   "routes": [
     "/",
     "/contact-us",
+    "/employers",
+    "/fraud-alert",
     "/job-news",
     "/job-seekers",
-    "/services"
+    "/privacy-policy",
+    "/services",
+    "/terms-condition"
   ]
 }

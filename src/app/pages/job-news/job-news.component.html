@@ -13,18 +13,17 @@
                         <div class="box" data-aos="fade-up">
                             <a href="">
                                 <div class="job-img mb-3">
-                                    <img class="g-img" [src]="baseUrl+'assets/images/latest-blog.jpg'" alt="latest-blog">
+                                    <img class="g-img" [src]="baseUrl+latestBlog.blog_img" [alt]="latestBlog.blogTitle">
                                 </div>
                             </a>
                         </div>
                         <div class="job-content">
                             <div class="box" data-aos="fade-up">
                                 <a href="" class="mb-3">
-                                    <h2>Expert Tips for Effective Employee Development</h2>
+                                    <h2 class="blog-title">{{latestBlog.blogTitle}}</h2>
                                 </a>
                                 <p class="mb-3">
-                                    We dive deep into the realm of employee development, uncovering a treasure trove of
-                                    expert tips and strategies.
+                                    {{latestBlog.blogDesc}}
                                 </p>
                             </div>
                         </div>
@@ -36,14 +35,49 @@
                         <div class="box" data-aos="fade-left">
                             <h3 class="recent-news-heading mb-3">RECENT <span class="pr-cl">NEWS</span></h3>
                         </div>
-                        <div class="box" data-aos="fade-down">
+                        @if (lastThreeBlogs.length) {
+                            @for (blog of lastThreeBlogs; track blog) {
+
+                                <div class="box" data-aos="fade-down">
+                                    <div class="recent-job-news px-2 mb-4">
+                                        <div class="row align-items-center">
+                                            
+                                            <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                                                <div class="box" data-aos="fade-right">
+                                                    <a href="">
+                                                        <div class="recent-img mb-3">
+                                                            <img class="g-img" [src]="baseUrl+blog.blog_img" alt="recent-news-1">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                                <div class="box" data-aos="fade-left">
+                                                    <a href="">
+                                                        <h3 class="recent-news-heading mb-2">{{blog.blogTitle}} </h3>
+                                                    </a>
+                                                    <p class="created-date mb-3"> {{blog.createdAt | date:"fullDate"}} </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>          
+                            }
+                        }@else {
+                            <h3>There is no data</h3>
+                        }
+
+                      
+                        
+                        <!-- <div class="box" data-aos="fade-down">
                             <div class="recent-job-news px-2 mb-4">
                                 <div class="row align-items-center">
+                                    
                                     <div class="col-lg-4 col-md-4 col-sm-12 col-12">
                                         <div class="box" data-aos="fade-right">
                                             <a href="">
                                                 <div class="recent-img mb-3">
-                                                    <img class="g-img" [src]="baseUrl+'assets/images/recent-news-1.jpeg'" alt="recent-news-1">
+                                                    <img class="g-img" [src]="baseUrl+'assets/images/recent-news-2.jpeg'" alt="recent-news-1">
                                                 </div>
                                             </a>
                                         </div>
@@ -105,7 +139,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
             </div>
         </div>

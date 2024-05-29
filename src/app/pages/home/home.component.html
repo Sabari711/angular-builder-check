@@ -25,7 +25,7 @@
                     <small>WELCOME TO <span class="pr-cl">GROVEMAN</span></small>
                     <h1 class="mb-3">Discover Your Profession, Forge Your Path</h1>
                     <p class="mb-4">Find your dream job or build your dream team. OUr platform connects top talents with top companies. post Jobs, apply with ease, consult with our team and lets grow together</p>
-                    <h3 class="mb-3">Connet >> Hire >> Thrive</h3>
+                    <h3 class="mb-3">Connect >> Hire >> Thrive</h3>
                     <a href="#contact-us-section"><button mat-raised-button class="pr-btn mb-4" >Free Consultation</button></a>
                 </div>
             </div>
@@ -55,8 +55,9 @@
             </div>
         </div>
         <div class="box" data-aos="fade-right">
-            <swiper-container class="mySwiper" slides-per-view="3" pagination="true" pagination-clickable="false" navigation="false" space-between="30"
-            centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+            <swiper-container class="mySwiper" slides-per-view=3 pagination="true" pagination-clickable="false" navigation="false" space-between="30"
+            centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false"
+            >
             <swiper-slide>
                 <div class="client-img mb-3 p-3">
                     <img class="g-img mb-3" [src]="baseUrl+'assets/images/client_1.jpeg'" alt="client_1">
@@ -234,7 +235,7 @@
         <span class="border-bottom"></span>
     </div>
     <div class="container text-start">
-        <div class="row p-2 align-items-center">
+        <div class="row p-2 align-items-center mb-3">
             <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="box" data-aos="fade-right">
                     <h3 class="pr-cl ms-4 mb-4">RECRUITMENT</h3>
@@ -402,6 +403,10 @@
             </div>
             
         </div>
+
+        <div class="text-center mb-3">
+            <a href="/employers" mat-raised-button class="pr-btn">Connect Us</a>
+        </div>
     </div>
 </section>
 <section class="wt-section for-employers-section">
@@ -414,7 +419,7 @@
         <span class="border-bottom"></span>
     </div>
     <div class="container text-start">
-        <div class="row p-2 align-items-center">
+        <div class="row p-2 align-items-center mb-3">
             <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="box" data-aos="fade-right">
 
@@ -589,6 +594,9 @@
                 </div>
             </div>
         </div>
+        <div class="text-center mb-3">
+            <a href="/job-seekers" mat-raised-button class="pr-btn">Apply Here</a>
+        </div>
     </div>
 </section>
 <section class="wt-section">
@@ -709,6 +717,12 @@
         <h2 class="text-center mb-3">CONTACT <span class="pr-cl">US</span></h2>
         <form [formGroup]="contactUsForm" (ngSubmit)="submit()">
             <div class="row g-3">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                    <mat-radio-group aria-label="Select an option" formControlName="category">
+                        <mat-radio-button value="employer">Employer</mat-radio-button>
+                        <mat-radio-button value="candidate">Candidate</mat-radio-button>
+                      </mat-radio-group>
+                </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-12">
             <div class="box" data-aos="fade-right">
                 

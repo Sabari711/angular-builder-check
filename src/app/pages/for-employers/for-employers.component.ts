@@ -19,21 +19,23 @@ import { isPlatformBrowser } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-job-seekers',
+  selector: 'app-for-employers',
   standalone: true,
   imports: [
-      MatFormFieldModule,
+    MatFormFieldModule,
       MatInputModule,
       MatButtonModule,
       FormsModule,
       ReactiveFormsModule,
       MatDialogModule,
   ],
-  templateUrl: './job-seekers.component.html',
-  styleUrl: './job-seekers.component.css',
-  providers: [ApiServiceService],
+  templateUrl: './for-employers.component.html',
+  styleUrl: './for-employers.component.css',
+  providers:[
+    ApiServiceService
+  ]
 })
-export class JobSeekersComponent implements OnInit {
+export class ForEmployersComponent implements OnInit {
   constructor(
     public apiServices: ApiServiceService,
     public dialog: MatDialog,
@@ -42,10 +44,10 @@ export class JobSeekersComponent implements OnInit {
     private toastr: ToastrService
   ) {}
   baseUrl: string = environment.frontEndUrl;
-  jobApplyForm!: FormGroup;
+  employersForm!: FormGroup;
   ngOnInit(): void {
-    this.jobApplyForm = this.fb.group({
-      name: [
+    this.employersForm = this.fb.group({
+      empName: [
         '',
         [
           Validators.required,
@@ -62,7 +64,7 @@ export class JobSeekersComponent implements OnInit {
         ],
       ],
       email: ['', [Validators.required, Validators.email]],
-      phoneNo: [
+      contactNo: [
         '',
         [
           Validators.required,
@@ -71,9 +73,11 @@ export class JobSeekersComponent implements OnInit {
           Validators.maxLength(10),
         ],
       ],
-      linkedInLink: [''],
-      shortIntro: ['', [Validators.required, Validators.maxLength(256)]],
-      resume_img: ['', [Validators.required]],
+      roleCate: ['',[Validators.required]],
+      compWebsite: ['',[Validators.required]],
+      noOfEmp: ['',[Validators.required]],
+      jobDesc: ['', [Validators.required, Validators.maxLength(500)]],
+      // resume_img: ['', [Validators.required]],
     });
 
     if (isPlatformBrowser(this.platformId)) {
@@ -83,11 +87,12 @@ export class JobSeekersComponent implements OnInit {
   }
 
   submit(): any {
-    if (this.jobApplyForm.valid) {
+    if (this.employersForm.valid) {
+
+
       this.apiServices
-        .UsersJobSubmit(
-          this.jobApplyForm.value,
-          this.jobApplyForm.get('resume_img')?.value
+        .EmployerFormSubmit(
+          this.employersForm.value,
         )
         .subscribe((data: any) => {
           console.log('data', data);
@@ -105,30 +110,31 @@ export class JobSeekersComponent implements OnInit {
       this.toastr.error('Please fill all the require fields');
     }
   }
-  preview: any;
-  selectFile(event: any) {
-    const file = event.target.files[0];
-    const allowedTypes = [
-      'application/pdf',
-      'application/msword'
-    ];
+  // preview: any;
+  // selectFile(event: any) {
+  //   const file = event.target.files[0];
+  //   const allowedTypes = [
+  //     'application/pdf',
+  //     'application/msword'
+  //   ];
 
-    if (file && allowedTypes.includes(file.type)) {
-      this.jobApplyForm.patchValue({
-        resume_img: file,
-      });
-      // this.jobApplyForm.get('resume_img')?.updateValueAndValidity();
+  //   if (file && allowedTypes.includes(file.type)) {
+  //     this.employersForm.patchValue({
+  //       resume_img: file,
+  //     });
+  //     // this.employersForm.get('resume_img')?.updateValueAndValidity();
 
-      const reader = new FileReader();
-      reader.onload = () => {
-        this.preview = reader.result as string;
-      };
-      reader.readAsDataURL(file);
-      // console.log(file);
-    } else {
-      // Handle invalid file type error
-      console.log('Invalid file type. Please select a PDF or DOC file.');
-      this.toastr.error('Invalid file type. Please select a PDF or DOC file.');
-    }
-  }
+  //     const reader = new FileReader();
+  //     reader.onload = () => {
+  //       this.preview = reader.result as string;
+  //     };
+  //     reader.readAsDataURL(file);
+  //     // console.log(file);
+  //   } else {
+  //     // Handle invalid file type error
+  //     console.log('Invalid file type. Please select a PDF or DOC file.');
+  //     this.toastr.error('Invalid file type. Please select a PDF or DOC file.');
+  //   }
+  // }
 }
+

@@ -46,3 +46,6 @@
     cursor: pointer;
     opacity: .8;
 }
+.blog-title{
+    text-transform: capitalize;
+}
