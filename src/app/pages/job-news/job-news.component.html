@@ -13,17 +13,22 @@
                         <div class="box" data-aos="fade-up">
                             <a href="">
                                 <div class="job-img mb-3">
-                                    <img class="g-img" [src]="baseUrl+latestBlog.blog_img" [alt]="latestBlog.blogTitle">
+                                    <!-- <img class="g-img" [src]="baseUrl+latestBlog.blog_img" [alt]="latestBlog.blogTitle"> -->
+                                    <img class="g-img" [src]="baseUrl+'assets/images/recent-news-1.jpeg'" alt="latestBlog">
+
                                 </div>
                             </a>
                         </div>
                         <div class="job-content">
                             <div class="box" data-aos="fade-up">
                                 <a href="" class="mb-3">
-                                    <h2 class="blog-title">{{latestBlog.blogTitle}}</h2>
+                                    <!-- <h2 class="blog-title">{{latestBlog.blogTitle}}</h2> -->
+                                    <h3 class="recent-news-heading mb-2">Adapting Your Organization for Success
+                                    </h3>
                                 </a>
                                 <p class="mb-3">
-                                    {{latestBlog.blogDesc}}
+                                    Adapting Your Organization for Success
+                                    <!-- {{latestBlog.blogDesc}} -->
                                 </p>
                             </div>
                         </div>
@@ -32,7 +37,7 @@
             </div>
             <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 recent-jobs">
                     <div class="px-lg-5 px-md-4 px-sm-2 px-1 mt-5">
-                        <div class="box" data-aos="fade-left">
+                        <!-- <div class="box" data-aos="fade-left">
                             <h3 class="recent-news-heading mb-3">RECENT <span class="pr-cl">NEWS</span></h3>
                         </div>
                         @if (lastThreeBlogs.length) {
@@ -65,11 +70,11 @@
                             }
                         }@else {
                             <h3>There is no data</h3>
-                        }
+                        } -->
 
                       
                         
-                        <!-- <div class="box" data-aos="fade-down">
+                        <div class="box" data-aos="fade-down">
                             <div class="recent-job-news px-2 mb-4">
                                 <div class="row align-items-center">
                                     
@@ -139,7 +144,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
             </div>
         </div>

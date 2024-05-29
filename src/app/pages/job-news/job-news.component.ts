@@ -15,7 +15,8 @@ import { ApiServiceService } from '../../services/api-service.service';
 })
 export class JobNewsComponent implements OnInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object,private api:ApiServiceService){}
-  baseUrl:string = environment.apiUrl+"blog/";
+  // baseUrl:string = environment.apiUrl+"blog/";
+  baseUrl:string = environment.frontEndUrl;
   latestBlog:any= {};
   lastThreeBlogs:any = [];
   ngOnInit(): void {
