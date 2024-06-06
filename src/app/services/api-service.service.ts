@@ -34,4 +34,10 @@ export class ApiServiceService {
   getBlogs(){
     return this.http.get(`${this.apiUrl}get-recent-blogs`)
   }
+  blogDetail(seo_url:string){
+    let data = {
+      seoUrl : seo_url
+    }
+    return this.http.post(`${this.apiUrl}blog-details`,data)
+  }
 }

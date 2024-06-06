@@ -214,6 +214,7 @@ section {
     float: left;
     position: relative;
 }
+
 section.banner-section {
     padding-top: 6rem;
 }
@@ -279,7 +280,8 @@ nav {
     max-width: 100%;
     width: 100%;
 }
-.nav-routes li a.active{
+
+.nav-routes li a.active {
     color: #f4a02e !important;
     transition: 0.3s;
 }
@@ -290,65 +292,86 @@ nav {
     width: 7px;
     background: #f4a02e;
     height: 7px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     background: #f1f1f1;
-  }
-  
-  /* ::-webkit-scrollbar-track {
+}
+
+/* ::-webkit-scrollbar-track {
     width: 5px;
     height: 5px;
   } */
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #f4a02e;
-  }
 
-  mat-form-field{
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f4a02e;
+}
+
+mat-form-field {
     width: 100%;
-  }
+}
+
+.pr-trm-fd-list {
+    font-size: 16px;
+    margin-left: 25px;
+}
+
+.pr-trm-fd-list span {
+    font-weight: 800;
+    margin-right: 5px;
+}
+
+.pr-trm-fd-list li {
+    line-height: 25px;
+    margin-bottom: 15px;
+}
 
 /*======================
     COMMON CSS END
 ========================*/
 
-.apply-section{
+.apply-section {
     background-color: #ecc54f;
 }
-.job-form{
+
+.job-form {
     background-color: #fff;
     border-radius: 0px 0px 10px 10px;
 }
-.job-form-layer{
+
+.job-form-layer {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
     /* padding: 20px; */
     margin: 0px auto;
-    width: 100%; 
+    width: 100%;
 }
-.apply-section img{
+
+.apply-section img {
     border-radius: 10px 10px 0px 0px;
 }
 
 @media (min-width: 750px) {
     .job-form-layer {
-        width: 80%; /* Adjust width for medium-sized screens */
+        width: 80%;
+        /* Adjust width for medium-sized screens */
     }
 }
 
 /* Media query for screens with a minimum width of 1000px */
 @media (min-width: 1000px) {
     .job-form-layer {
-        width: 75%; /* Adjust width for large screens */
+        width: 75%;
+        /* Adjust width for large screens */
     }
 }
 
 /* Media query for screens with a minimum width of 1250px */
 @media (min-width: 1250px) {
     .job-form-layer {
-        width: 70%; /* Adjust width for extra-large screens */
+        width: 70%;
+        /* Adjust width for extra-large screens */
     }
 }

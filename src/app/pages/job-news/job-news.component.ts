@@ -32,6 +32,8 @@ export class JobNewsComponent implements OnInit {
     this.api.getBlogs().subscribe((data:any)=>{
       if(data.status){
         this.latestBlog = data.recentData
+        console.log(this.latestBlog);
+        
         this.lastThreeBlogs = data.latestBlogs
       }
     })

@@ -8,6 +8,7 @@ import { ForEmployersComponent } from './pages/for-employers/for-employers.compo
 import { TermsConditionsComponent } from './pages/terms-conditions/terms-conditions.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { FraudAlertComponent } from './pages/fraud-alert/fraud-alert.component';
+import { BlogDetailsComponent } from './pages/blog-details/blog-details.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -19,5 +20,7 @@ export const routes: Routes = [
     {path:"terms-condition",component:TermsConditionsComponent},
     {path:"privacy-policy",component:PrivacyPolicyComponent},
     {path:"fraud-alert",component:FraudAlertComponent},
+    // {path:"blog/:blog-data",component:BlogDetailsComponent},
+
 
 ];
